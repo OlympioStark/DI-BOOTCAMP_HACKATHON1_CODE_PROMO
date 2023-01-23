@@ -5,47 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../css/page_sodeci.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Page SODECI</title>
 </head>
 
 <body>
+    <!-- Début header -->
 
-    <!-- Formulaire de recherche de client -->
-    <div class="container-fluid">
-        <form>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
+    <header>
+        <div class="toolbar" role="banner">
+            <img width="40" alt="Angular Logo" src="../PageAccueil/images/logo.png" />
+            <span><H1>CODE <span style="color: rgb(238, 146, 146);">PROMO</span></H1>
+            </span>
+            <div class="spacer"></div>
+        </div>
+    </header>
+
+    <!-- Fin header -->
+
+    <div class="container">
+        <!-- Début menu -->
+        <div class="left_side">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="logo_SODECI">
+                        <h2><span class="danger"> SODECI </span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+
+                    <div class="sidebar">
+                        <a href="#" class="active">
+                            <span class="material-icons-sharp"> group_work </span>
+                            <h3>Partenaire</h3>
+                        </a>
+                        <a href="../html/page_cie.html">
+                            <span class="material-icons-sharp"> tips_and_updates </span>
+                            <h3>CIE</h3>
+                        </a>
+                        <a href="../html/page_sodeci.html">
+                            <span class="material-icons-sharp">water</span>
+                            <h3>SODECI</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp"> mail</span>
+                            <h3>Messages</h3>
+                            <span class="message-count"> 26</span>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">settings</span>
+                            <h3>Settings</h3>
+                        </a>
+                        <a href="#">
+                            <span class="material-icons-sharp">logout</span>
+                            <h3>Logout</h3>
+                        </a>
+                    </div>
                 </div>
+            </aside>
+        </div>
+        <!-- Fin menu -->
+
+        <div class="right_side">
+            <!-- Formulaire de recherche de client -->
+            <div class="container-fluid">
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+
+            <br>
+
+            <!-- Tableau d'affichage de la recherche -->
+            <div class="container-fluid">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <td>Nom client</td>
+                            <td>Prenoms</td>
+                            <td>Période</td>
+                            <td>Consommation</td>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
     </div>
-
-    <br>
-
-    <!-- Tableau d'affichage de la recherche -->
-    <div class="container-fluid">
-        <table class="table table-dark table-striped">
-            <thead>
-                <tr>
-                    <td>Nom client</td>
-                    <td>Prenoms</td>
-                    <td>Période</td>
-                    <td>Consommation</td>
-                </tr>
-            </thead>
-
-            <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-            </tr>
-        </table>
-
 </body>
 
 </html>
