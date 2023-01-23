@@ -56,6 +56,11 @@ body {
     color: var(--color-dark);
 }
 
+header {
+    background-color: var(--color-info-dark);
+    margin-bottom: 5%;
+}
+
 a {
     color: var(--color-dark);
 }
